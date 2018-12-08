@@ -29,7 +29,7 @@ html, body {
 }
 
 .container{
-
+  padding: 0 10px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -67,10 +67,6 @@ a {
   align-items: stretch;
 }
 
-/* #about > *{
-  margin: 50px;
-} */
-
 .about-text {
   font-size: 21px;
   flex: 0 1 650px;
@@ -78,7 +74,7 @@ a {
 }
 #about div {
   margin-left: 0;
-  flex: 0 0 265px;
+  flex: 0 1 265px;
 }
 
 .about-pic {
@@ -142,5 +138,7 @@ a {
 
 footer {
   text-align: center;
-  background-color: aqua;
+  color: white;
+  background-color: #696969;
+  padding: 10px 0;
 }
