@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Muli', sans-serif;
+}
+html, body {
+  height: 100%;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("https://farm5.staticflickr.com/4910/46179118312_1c77265db2_o.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* position: fixed; */
+  width: 100%;
+  height: 100%;
+
+}
+
+.hero-text {
+  color:white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4.5em;
+}
+
+.container{
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: auto;
+  max-width: 915px;
+  background: white;
+}
+
+a {
+  text-decoration: none;
+  color: lightskyblue;
+}
+
+.quote-space {
+  margin: 20px 0;
+  height: content;
+  font-size: 3em;
+  text-align: right;
+  align-self: right;
+}
+
+.quote{
+  text-align: center;
+}
+
+.author {
+  font-size: 0.5em;
+  text-align: right;
+  color: grey;
+}
+
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* #about > *{
+  margin: 50px;
+} */
+
+.about-text {
+  font-size: 21px;
+  flex: 0 1 650px;
+  margin-right: 10px;
+}
+#about div {
+  margin-left: 0;
+  flex: 0 0 265px;
+}
+
+.about-pic {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.bio {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  align-items: flex-start;
+}
+
+.left-image {
+  flex: 0 0 350px;
+  /* background-size: contain; */
+  background-repeat: no-repeat;
+  height: 100vh;
+  top: 0;
+  position: sticky;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 30%, white 95%), url('https://farm5.staticflickr.com/4828/46229515791_28b6f56430_b.jpg');
+}
+
+#bio-area {
+  flex: 0 1 565px;
+  justify-content: center;
+  display: grid;
+  grid-gap: 20px 20px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 250px));
+}
+
+.bio-item {
+  box-shadow: 0px 0px 5px 0px grey;
+  padding: 5px 10px;
+  font-size: 18px;
+  min-height: 4em;
+}
+
+.bio-item > * {
+  text-align: left;
+}
+
+.bio-item h2 {
+  color:rgba(255, 0, 0, 0.15);
+  font-family: monospace;
+  font-size: 4em;
+  position: absolute;
+  transform: translate(-7%, -25%);
+
+}
+
+.bio-item p{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5px;
+}
+
+footer {
+  text-align: center;
+  background-color: aqua;
+}
