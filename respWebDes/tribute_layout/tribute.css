@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Sans|Ubuntu:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Muli);
 
 :root {
   --slider-hight : 970px;
@@ -16,11 +17,14 @@ html, body {
   font-family: 'Muli', sans-serif;
 }
 
-.hero-area {
-  background: red;
-  height: 100%;
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("https://farm5.staticflickr.com/4910/46179118312_1c77265db2_o.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* position: fixed; */
   width: 100%;
-  border: 2px solid cyan;
+  height: 100%;
 }
 
 .hero-text {
@@ -30,6 +34,7 @@ html, body {
   transform: translate(-50%, -50%);
   color: white;
   font-size: 4em;
+  text-align: center;
 }
 
 .content-area {
@@ -48,7 +53,7 @@ html, body {
 }
 
 .left-slider {
-  background: green;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 30%, white 95%),url('https://farm5.staticflickr.com/4828/46229515791_28b6f56430_b.jpg');
   height: var(--slider-hight);
   flex: 0 0 300px;
   position: sticky;
@@ -61,6 +66,9 @@ html, body {
   .left-slider {
     flex: 0 1 300px;
   }
+}
+
+@media (max-width: 1560px){
   .right-slider {
     display: none;
   }
@@ -90,11 +98,12 @@ html, body {
 /* quote section styling */
 blockquote {
   display: block;
+  font-size: 1.5em;
   border-width: 2px 0;
   border-style: solid;
   border-color: #eee;
   padding: 1.5em 0 0.5em;
-  margin: 1.5em 0;
+  margin: 1em 0;
   position: relative;
 }
 blockquote:before {
@@ -102,7 +111,7 @@ blockquote:before {
   position: absolute;
   top: 0em;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -100%);
   background: #fff;
   width: 3rem;
   height: 2rem;
@@ -119,13 +128,13 @@ blockquote:after {
 }
 /* about section styling */
 #about-section .section-content .text-div {
-  border: 2px solid cyan;
+  /* border: 2px solid cyan; */
   flex: 0 0 660px;
 }
 
 #about-section .section-content .img-div {
   flex: 1 0;
-  border: 2px solid greenyellow;
+  /* border: 2px solid greenyellow; */
 }
 /* images styling - do not exceed container size*/
 img {
