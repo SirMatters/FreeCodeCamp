@@ -22,7 +22,6 @@ html, body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  /* position: fixed; */
   width: 100%;
   height: 100%;
 }
@@ -38,7 +37,7 @@ html, body {
 }
 
 .content-area {
-  background: blue;
+  /* background: blue; */
   max-width: 1560px;
   position: relative;
   /* make footer be in the bottom of short pages */
@@ -52,33 +51,14 @@ html, body {
   align-items: flex-start;
 }
 
-.left-slider {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 30%, white 95%),url('https://farm5.staticflickr.com/4828/46229515791_28b6f56430_b.jpg');
-  height: var(--slider-hight);
-  flex: 0 0 300px;
-  position: sticky;
-  top: 0;
-
-}
 
 
-@media (max-width: 1260px) {
-  .left-slider {
-    flex: 0 1 300px;
-  }
-}
-
-@media (max-width: 1560px){
-  .right-slider {
-    display: none;
-  }
-}
 /* content area stiling */
 .content {
   background: white;
-  height: 2000px;
+  /* height: 2000px; */
   flex: 0 0 960px;
-  padding: 10px;
+  padding: 20px;
 }
 
 /* sections styling */
@@ -92,8 +72,12 @@ html, body {
 }
 
 .section-content .text-div{
-  font-size: 1.5em;
+  font-size: 1.25em;
   text-align: left;
+}
+
+.section-content .img-div {
+  padding-top: 0.5em;
 }
 /* quote section styling */
 blockquote {
@@ -129,7 +113,7 @@ blockquote:after {
 /* about section styling */
 #about-section .section-content .text-div {
   /* border: 2px solid cyan; */
-  flex: 0 0 660px;
+  flex: 0 0 700px;
 }
 
 #about-section .section-content .img-div {
@@ -137,16 +121,64 @@ blockquote:after {
   /* border: 2px solid greenyellow; */
 }
 /* images styling - do not exceed container size*/
+
 img {
   max-width: 100%;
   max-height: 100%;
   width:auto;
   height: auto;
+  display: block;
+}
+
+/* bio section styling */
+.bio-grid {
+  display: grid;
+  max-width: auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px 20px;
+}
+
+.bio-item {
+  box-shadow: 0px 0px 5px 0px grey;
+  padding: 5px 10px;
+  font-size: 18px;
+  min-height: 4em;
+}
+
+.bio-item-date {
+  position: absolute;
+  font-size: 3em;
+  color: rgba(255, 0, 0, 0.3);
+  transform: translate(-10%, -20%);
+  font-weight: 600;
+}
+
+.bio-item-text {
+  font-size: 1.2em;
+}
+
+#katana-stand {
+  padding-top: 10px;
+  max-width: fit-content;
+  min-height: 10em;
+  margin: auto;
+  /* margin-bottom: 50px; */
+  flex: 0 0;
+}
+
+.left-slider {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 30%, white 95%),url('https://farm5.staticflickr.com/4828/46229515791_28b6f56430_b.jpg');
+  height: var(--slider-hight);
+  flex: 0 0 300px;
+  position: sticky;
+  top: 0;
 }
 
 .right-slider {
-  border: 2px solid red;
-  background: black;
+  /* border: 2px solid red; */
+  background: url('./slider-right.png');
+  background-repeat: no-repeat;
+  background-size: contain;
   height: var(--slider-hight);
   flex: 0 1 300px;
   position: sticky;
@@ -155,9 +187,27 @@ img {
 
 footer {
   height: 50px;
-  background-color: cornflowerblue;
+  background-color: black;
   width: 100%;
-  /* margin-top: var(--footer-hight); */
-  z-index: 100;
+  color: red;
+  font-size: 1.2em;
+  text-align: center;
+  line-height: 3em;
+}
 
+a {
+  text-decoration: none;
+  color: lightskyblue;
+}
+
+@media (max-width: 1260px) {
+  .left-slider {
+    flex: 0 1 300px;
+  }
+}
+
+@media (max-width: 1560px){
+  .right-slider {
+    display: none;
+  }
 }
